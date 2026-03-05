@@ -2,7 +2,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)]()
 
 Repository ini berisi kumpulan materi dan kode program untuk mata kuliah **Praktikum Dasar Kecerdasan Artifisial** pada Program Studi S1 Informatika, Universitas Telkom.
 
@@ -25,21 +24,21 @@ Repository ini dokumentasi praktikum untuk memahami konsep dasar kecerdasan arti
 
 ## 📖 Daftar Modul
 
-| No | Modul | Topik | Status |
-|:--:|-------|-------|:------:|
-| 01 | [Pengenalan Python](./Modul%201/) | Dasar pemrograman Python, tipe data, fungsi, dan pemrograman modular | ✅ |
-| 02 | [Pengenalan Library NumPy](./Modul%202/) | Operasi array, indexing, slicing, dan manipulasi data numerik | ✅ |
-| 03 | [Pengenalan Library NetworkX](./Modul%203/) | Pembuatan dan manipulasi struktur data graf | ⬜ |
-| 04 | [Pengenalan Library Matplotlib](./Modul%204/) | Visualisasi data dan grafik | ⬜ |
-| 05 | [Implementasi Breadth-First Search](./Modul%205/) | Algoritma pencarian melebar pada graf | ⬜ |
-| 06 | [Implementasi Depth-First Search](./Modul%206/) | Algoritma pencarian mendalam pada graf | ⬜ |
-| 07 | [Implementasi Uniform Cost Search](./Modul%207/) | Algoritma pencarian dengan biaya seragam | ⬜ |
-| 08 | [Implementasi Hill Climbing](./Modul%208/) | Algoritma optimasi heuristic search | ⬜ |
-| 09 | [Implementasi Simulated Annealing](./Modul%209/) | Algoritma optimasi probabilistik | ⬜ |
-| 10 | [Implementasi Greedy Best-First Search](./Modul%2010/) | Algoritma pencarian greedy berdasarkan heuristik | ⬜ |
-| 11 | [Implementasi A*](./Modul%2011/) | Algoritma pencarian jalur optimal A* | ⬜ |
-| 12 | [Pengenalan Library SymPy](./Modul%2012/) | Komputasi simbolik matematika | ⬜ |
-| 13 | [Pengenalan Library Scikit-Fuzzy](./Modul%2013/) | Sistem fuzzy logic untuk pengambilan keputusan | ⬜ |
+| No | Modul | Topik |
+|:--:|-------|-------|
+| 01 | [Pengenalan Python](./Modul%201/) | Dasar pemrograman Python, tipe data, fungsi, dan pemrograman modular |
+| 02 | [Pengenalan Library NumPy](./Modul%202/) | Operasi array, indexing, slicing, dan manipulasi data numerik |
+| 03 | [Pengenalan Library NetworkX](./Modul%203/) | Pembuatan dan manipulasi struktur data graf |
+| 04 | [Pengenalan Library Matplotlib](./Modul%204/) | Visualisasi data dan grafik |
+| 05 | [Implementasi Breadth-First Search](./Modul%205/) | Algoritma pencarian melebar pada graf |
+| 06 | [Implementasi Depth-First Search](./Modul%206/) | Algoritma pencarian mendalam pada graf |
+| 07 | [Implementasi Uniform Cost Search](./Modul%207/) | Algoritma pencarian dengan biaya seragam |
+| 08 | [Implementasi Hill Climbing](./Modul%208/) | Algoritma optimasi heuristic search |
+| 09 | [Implementasi Simulated Annealing](./Modul%209/) | Algoritma optimasi probabilistik |
+| 10 | [Implementasi Greedy Best-First Search](./Modul%2010/) | Algoritma pencarian greedy berdasarkan heuristik |
+| 11 | [Implementasi A*](./Modul%2011/) | Algoritma pencarian jalur optimal A* |
+| 12 | [Pengenalan Library SymPy](./Modul%2012/) | Komputasi simbolik matematika |
+| 13 | [Pengenalan Library Scikit-Fuzzy](./Modul%2013/) | Sistem fuzzy logic untuk pengambilan keputusan |
 
 **Keterangan Status:**
 - ✅ = Selesai
