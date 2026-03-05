@@ -1,232 +1,192 @@
-Berikut adalah versi **lebih general** yang dapat digunakan sebagai **Template Utama** untuk seluruh repository praktikum Dasar Kecerdasan Artifisial (DKA) selama satu semester. Template ini dirancang agar dapat diterapkan untuk **semua Modul (1-13)** tanpa perlu mengubah struktur secara signifikan.
+# 📚 Dasar Kecerdasan Artifisial - Praktikum
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)]()
+
+Repository ini berisi kumpulan materi dan kode program untuk mata kuliah **Praktikum Dasar Kecerdasan Artifisial** pada Program Studi S1 Informatika, Universitas Telkom.
 
 ---
 
-# 📘 Template Repository Praktikum DKA (General)
+## 📋 Deskripsi
 
-## 1. Struktur Folder Repository
-Agar rapi dan mudah dinavigasi untuk semua modul, gunakan struktur folder berikut:
+Repository ini dokumentasi praktikum untuk memahami konsep dasar kecerdasan artifisial melalui implementasi berbagai algoritma dan library Python. Setiap modul berisi materi teori, contoh kode, dan latihan praktikum.
+
+---
+
+## 🎯 Tujuan Praktikum
+
+- Memahami dasar pemrograman Python untuk AI
+- Menguasai library-library fundamental untuk kecerdasan artifisial
+- Mengimplementasikan berbagai algoritma pencarian dan optimasi
+- Mengembangkan kemampuan problem-solving dengan pendekatan AI
+
+---
+
+## 📖 Daftar Modul
+
+| No | Modul | Topik | Status |
+|:--:|-------|-------|:------:|
+| 01 | [Pengenalan Python](./Modul%201/) | Dasar pemrograman Python, tipe data, fungsi, dan pemrograman modular | ✅ |
+| 02 | [Pengenalan Library NumPy](./Modul%202/) | Operasi array, indexing, slicing, dan manipulasi data numerik | ✅ |
+| 03 | [Pengenalan Library NetworkX](./Modul%203/) | Pembuatan dan manipulasi struktur data graf | ⬜ |
+| 04 | [Pengenalan Library Matplotlib](./Modul%204/) | Visualisasi data dan grafik | ⬜ |
+| 05 | [Implementasi Breadth-First Search](./Modul%205/) | Algoritma pencarian melebar pada graf | ⬜ |
+| 06 | [Implementasi Depth-First Search](./Modul%206/) | Algoritma pencarian mendalam pada graf | ⬜ |
+| 07 | [Implementasi Uniform Cost Search](./Modul%207/) | Algoritma pencarian dengan biaya seragam | ⬜ |
+| 08 | [Implementasi Hill Climbing](./Modul%208/) | Algoritma optimasi heuristic search | ⬜ |
+| 09 | [Implementasi Simulated Annealing](./Modul%209/) | Algoritma optimasi probabilistik | ⬜ |
+| 10 | [Implementasi Greedy Best-First Search](./Modul%2010/) | Algoritma pencarian greedy berdasarkan heuristik | ⬜ |
+| 11 | [Implementasi A*](./Modul%2011/) | Algoritma pencarian jalur optimal A* | ⬜ |
+| 12 | [Pengenalan Library SymPy](./Modul%2012/) | Komputasi simbolik matematika | ⬜ |
+| 13 | [Pengenalan Library Scikit-Fuzzy](./Modul%2013/) | Sistem fuzzy logic untuk pengambilan keputusan | ⬜ |
+
+**Keterangan Status:**
+- ✅ = Selesai
+- ⬜ = Belum Dimulai
+- 🔄 = Dalam Pengerjaan
+
+---
+
+## 🛠️ Teknologi & Library
+
+- **Python 3.8+**
+- **NumPy** - Komputasi numerik dan array
+- **NetworkX** - Manipulasi graf dan jaringan
+- **Matplotlib** - Visualisasi data
+- **SymPy** - Matematika simbolik
+- **Scikit-Fuzzy** - Sistem fuzzy logic
+- **Jupyter Notebook** - Interactive coding
+- **VS Code** - Code editor
+
+---
+
+## 📁 Struktur Repository
 
 ```
-DKA-Praktikum-2026/
-├── README.md                  # Panduan umum repository ini
-├── LICENSE                    # Lisensi penggunaan kode
-├── requirements.txt           # Daftar library yang dibutuhkan (numpy, networkx, dll)
-├── Regulations/               # Salinan peraturan praktikum (PDF)
-├── Modul-01-Python/           # Folder khusus Modul 1
-│   ├── Code/                  # Semua file .py untuk modul ini
-│   ├── Screenshots/           # Bukti output program
-│   └── Laporan_Modul_01.pdf   # Laporan resmi
-├── Modul-02-NumPy/            # Folder khusus Modul 2
-│   ├── Code/
-│   ├── Screenshots/
-│   └── Laporan_Modul_02.pdf
-├── Modul-03-NetworkX/         # dst...
+DKA-Praktikum/
+├── Modul 1/
+│   ├── README.md
+│   ├── source_code/
+│   └── laporan/
+├── Modul 2/
+│   ├── README.md
+│   ├── source_code/
+│   └── laporan/
+├── Modul 3/
+│   └── ...
 ├── ...
-└── Modul-13-ScikitFuzzy/
+├── Modul 13/
+│   └── ...
+├── assets/
+│   └── images/
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## 2. Template README.md (General)
-*Salin ini ke file `README.md` utama repository Anda.*
+## 🚀 Cara Menjalankan
 
-```markdown
-# 🤖 Repositori Praktikum Dasar Kecerdasan Artifisial (DKA)
+### Prasyarat
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![University](https://img.shields.io/badge/University-Telkom%20University-orange.svg)](https://telkomuniversity.ac.id/)
-[![Semester](https://img.shields.io/badge/Semester-Genap%202025/2026-green.svg)]()
+1. Install [Python 3.8+](https://www.python.org/downloads/)
+2. Install [Anaconda](https://www.anaconda.com/download) (direkomendasikan)
+3. Clone repository ini
 
-Repository ini berisi kumpulan kode sumber, dokumentasi, dan laporan praktikum mata kuliah **Dasar Kecerdasan Artifisial** Program Studi S1 Informatika, Universitas Telkom.
+### Instalasi Dependencies
 
-## 📋 Informasi Mata Kuliah
-| Detail | Keterangan |
-|--------|------------|
-| **Kode MK** | [Isi Kode MK] |
-| **Dosen Koordinator** | Sabrina Adinda Sari, S.Kom., M.Kom. |
-| **Laboratorium** | Laboratorium Informatika (Gedung TULT Lt. 6 & 7) |
-| **Durasi** | 100 Menit per Pertemuan |
-| **Pertemuan** | 16 Kali Pertemuan |
+```bash
+# Clone repository
+git clone https://github.com/username/DKA-Praktikum.git
 
-## 📚 Daftar Modul Praktikum
-Repository ini mencakup 13 Modul Praktikum:
+# Masuk ke direktori
+cd DKA-Praktikum
 
-| Modul | Topik | Library Utama | Status |
-|-------|-------|---------------|--------|
-| 01 | Pengenalan Python | Standard Library | ✅ |
-| 02 | Library NumPy | NumPy | ✅ |
-| 03 | Library NetworkX | NetworkX | ⏳ |
-| 04 | Library Matplotlib | Matplotlib | ⏳ |
-| 05 | Breadth-First Search | NetworkX | ⏳ |
-| 06 | Depth-First Search | NetworkX | ⏳ |
-| 07 | Uniform Cost Search | NetworkX | ⏳ |
-| 08 | Hill Climbing | Standard/NumPy | ⏳ |
-| 09 | Simulated Annealing | Standard/NumPy | ⏳ |
-| 10 | Greedy Best-First Search | NetworkX | ⏳ |
-| 11 | A* Algorithm | NetworkX | ⏳ |
-| 12 | Library SymPy | SymPy | ⏳ |
-| 13 | Library Scikit-Fuzzy | Scikit-Fuzzy | ⏳ |
+# Install dependencies
+pip install -r requirements.txt
 
-## 🛠️ Instalasi Environment
-1. **Install Anaconda** (Direkomendasikan)
-2. **Buat Environment Baru:**
-   ```bash
-   conda create -n dka-env python=3.9
-   conda activate dka-env
-   ```
-3. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *Isi requirements.txt:*
-   ```text
-   numpy
-   networkx
-   matplotlib
-   sympy
-   scikit-fuzzy
-   ```
+# Atau jika menggunakan conda
+conda env create -f environment.yml
+```
 
-## 📝 Format Laporan
-Setiap modul wajib dikumpulkan dengan format berikut:
-1. **Cover** (Nama, NIM, Kelas, Modul)
-2. **Tujuan Praktikum** (Diambil dari Modul)
-3. **Kode Program** (Screenshot dari VS Code/Jupyter)
-4. **Output Program** (Screenshot Terminal/Console)
-5. **Analisis & Penjelasan** (Penjelasan per baris kode penting)
-6. **Kesimpulan**
+### Menjalankan Kode
 
-## ⚠️ Peraturan Penting
-- **Kehadiran:** Minimal 75% dari total pertemuan.
-- **Keterlambatan:** 
-  - ≤ 5 menit: Diizinkan masuk.
-  - ≥ 30 menit: Tidak diizinkan mengikuti praktikum.
-- **Susulan:** Maksimal 2 kali modul (dengan syarat administratif: sakit/tugas/musibah).
-- **Plagiarisme:** Penyebaran soal/kunci jawaban akan dikenai sanksi nilai 0 atau Komisi Disiplin.
-- **Kebersihan:** Wajib menghapus file praktikum setelah selesai (Pengurangan nilai 20% jika lupa).
+```bash
+# Jalankan file Python
+python Modul_1/source_code/nama_file.py
 
-## 📧 Kontak
-| Nama | NIM | Email |
+# Atau buka Jupyter Notebook
+jupyter notebook
+```
+
+---
+
+## 📝 Peraturan Praktikum
+
+1. Praktikan wajib hadir minimal **75%** dari seluruh pertemuan
+2. Durasi praktikum: **100 menit** per pertemuan
+3. Wajib membawa modul praktikum dan alat tulis
+4. Dilarang menyebarkan soal dan kunci jawaban praktikum
+5. File praktikum harus dihapus setelah selesai (jika lupa: pengurangan nilai 20%)
+
+---
+
+## 📊 Penilaian
+
+| Komponen | Bobot |
+|----------|-------|
+| Kehadiran | 20% |
+| Laporan Praktikum | 40% |
+| Tugas & Latihan | 25% |
+| Ujian Praktikum | 15% |
+
+---
+
+## 👥 Kontributor
+
+| Nama | NIM | Peran |
 |------|-----|-------|
-| [Nama Anda] | [NIM Anda] | [Email Mahasiswa] |
-
----
-**Made with ❤️ for Telkom University Informatics Practicum**
-```
+| [Nama Anda] | [NIM Anda] | Author |
 
 ---
 
-## 3. Template Laporan Praktikum (General)
-*Gunakan struktur ini untuk membuat laporan PDF setiap modul.*
+## 📞 Kontak & Komplain
 
-### **HALAMAN JUDUL**
-```
-LAPORAN PRAKTIKUM DASAR KECERDASAN ARTIFISIAL
-MODUL [X]: [JUDUL MODUL]
+Untuk pertanyaan atau komplain terkait praktikum:
 
-Disusun Oleh:
-Nama    : [Nama Lengkap]
-NIM     : [NIM]
-Kelas   : [Kelas Praktikum]
-Asisten : [Nama Asisten]
+1. **Melalui IGracias:**
+   - Login IGracias → Menu Masukan dan Komplain → Input Tiket
+   - Fakultas: Bidang Akademik (FIF)
+   - Program Studi: Urusan Laboratorium/Bengkel/Studio (FIF)
+   - Layanan: Praktikum
 
-LABORATORIUM INFORMATIKA
-FAKULTAS INFORMATIKA
-UNIVERSITAS TELKOM
-2026
-```
-
-### **BAB 1: PENDAHULUAN**
-**1.1 Tujuan Praktikum**
-*(Salin tujuan dari PDF Modul yang bersangkutan)*
-1. ...
-2. ...
-
-**1.2 Dasar Teori**
-*(Jelaskan singkat teori yang digunakan, misal: "NumPy adalah library untuk komputasi numerik...")*
-
-### **BAB 2: IMPLEMENTASI**
-**2.1 Kode Program**
-*(Tempelkan screenshot kode dari VS Code/Jupyter. Pastikan terlihat jelas)*
-![Screenshot Kode](../Modul-X/Screenshots/code_1.png)
-
-**2.2 Output Program**
-*(Tempelkan screenshot hasil running program)*
-![Screenshot Output](../Modul-X/Screenshots/output_1.png)
-
-**2.3 Penjelasan Kode**
-*(Jelaskan bagian kode yang krusial)*
-- **Baris 1:** Import library...
-- **Baris 5:** Mendefinisikan array...
-- **Baris 10:** Melakukan operasi matematika...
-
-### **BAB 3: ANALISIS & SOAL LATIHAN**
-**3.1 Analisis Hasil**
-*(Apa yang terjadi jika input diubah? Apakah output sesuai ekspektasi?)*
-
-**3.2 Jawaban Soal Latihan**
-*(Kerjakan soal latihan yang ada di akhir setiap modul PDF)*
-- **Soal 1:** [Jawaban & Screenshot]
-- **Soal 2:** [Jawaban & Screenshot]
-
-### **BAB 4: KESIMPULAN**
-*(Ringkasan apa yang dipelajari dari modul ini)*
-1. Mahasiswa mampu...
-2. Mahasiswa memahami...
+2. **Melalui Website:**
+   - Buka [IFLAB Website](https://informatics.labs.telkomuniversity.ac.id/)
+   - Pilih menu Feedback → Link Form Feedback
 
 ---
 
-## 4. Panduan Umum Pengerjaan (Workflow)
-*Ikuti langkah ini untuk setiap modul (1-13):*
+## 📄 Lisensi
 
-1. **Persiapan (Sebelum Lab):**
-   - Baca PDF Modul yang akan dipraktikumkan.
-   - Pastikan Anaconda/VS Code sudah terinstall.
-   - Siapkan folder sesuai struktur repository.
-
-2. **Pelaksanaan (Saat Lab):**
-   - Hadir tepat waktu (Max terlambat 5 menit).
-   - Gunakan seragam sesuai aturan institusi.
-   - Kerjakan contoh kode di modul terlebih dahulu.
-   - **Screenshot setiap perubahan kode** untuk bukti laporan.
-   - Kerjakan Soal Latihan di akhir modul.
-
-3. **Pasca Lab:**
-   - Rapikan kode (beri komentar).
-   - Susun laporan sesuai template.
-   - **Hapus file sementara** di komputer lab (Wajib!).
-   - Upload ke Repository GitHub/IGracias sesuai deadline.
-
-4. **Komplain (Jika ada kendala):**
-   - Melalui **IGracias**: Menu Masukan & Komplain -> Input Tiket -> FIF -> Urusan Lab -> Praktikum.
-   - Melalui **Website**: informatics.labs.telkomuniversity.ac.id -> Feedback.
+Repository ini dibuat untuk keperluan akademis. Dilarang menyebarkan soal dan kunci jawaban praktikum kepada pihak lain.
 
 ---
 
-## 5. Checklist Library per Modul
-*Pastikan library berikut terinstall sesuai modul yang dikerjakan:*
+## 🙏 Acknowledgements
 
-| Modul | Library Wajib | Cara Install |
-|-------|---------------|--------------|
-| 1 | `python` (Bawaan) | - |
-| 2 | `numpy` | `pip install numpy` |
-| 3 | `networkx`, `matplotlib` | `pip install networkx matplotlib` |
-| 4 | `matplotlib` | `pip install matplotlib` |
-| 5-7, 10-11 | `networkx`, `matplotlib` | `pip install networkx matplotlib` |
-| 8-9 | `numpy`, `random`, `math` | (Bawaan Python) |
-| 12 | `sympy` | `pip install sympy` |
-| 13 | `scikit-fuzzy`, `numpy` | `pip install scikit-fuzzy` |
+- **Koordinator MK:** Sabrina Adinda Sari, S.Kom., M.Kom.
+- **Kepala Program Studi:** Dr. Mahmud Dwi Sulistiyo, S.T., M.T.
+- **Program Studi:** S1 Informatika, Universitas Telkom
+- **Semester:** Genap 2025/2026
 
 ---
 
-## 6. Tips Sukses Praktikum DKA
-1. **Backup Kode:** Selalu push ke GitHub setiap selesai satu sub-bab.
-2. **Pahami Konsep:** Jangan hanya copy-paste. Pahami alur algoritma (terutama Modul 5-11 tentang Search & Optimization).
-3. **Perhatikan Tipe Data:** Kesalahan umum terjadi pada tipe data (int vs float vs string) terutama di NumPy dan Fuzzy Logic.
-4. **Visualisasi:** Untuk modul NetworkX dan Matplotlib, pastikan grafik muncul dengan jelas (gunakan `plt.show()`).
-5. **Jaga Etika:** Dilarang menyebarkan soal/kunci jawaban ke angkatan bawah atau teman luar kelas (Sanksi Berat).
+<div align="center">
 
----
+**Made with ❤️ by [Nama Anda]**
 
-*Dokumen ini bersifat general dan dapat digunakan sebagai panduan standar untuk seluruh rangkaian praktikum Dasar Kecerdasan Artifisial Semester Genap 2025/2026.*
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github)](https://github.com/username)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/username)
+
+</div>
