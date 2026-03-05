@@ -1,0 +1,1 @@
+print("Hello, peserta praktikum Dasar Kecerdasan Artifisial!")
