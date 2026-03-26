@@ -1,7 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# Membuat graph
 G = nx.Graph()
 
 edges = [
@@ -32,7 +31,38 @@ edges = [
 
 G.add_weighted_edges_from(edges)
 
-# POSISI NODE (dibuat manual agar mirip gambar)
+print("=== GRAF ROMANIA ===")
+print(f"Jumlah node (kota): {G.number_of_nodes()}")
+print(f"Jumlah edge (jalur): {G.number_of_edges()}")
+print(f"Kota-kota: {list(G.nodes())}")
+print()
+
+print("=" * 80)
+print("=== SEMUA PASANGAN SHORTEST PATH (ALL PAIRS SHORTEST PATH) ===")
+print("=" * 80)
+
+all_shortest_paths = dict(nx.all_pairs_dijkstra_path(G, weight='weight'))
+all_shortest_path_lengths = dict(nx.all_pairs_dijkstra_path_length(G, weight='weight'))
+
+
+print("\n=== CONTOH SHORTEST PATH PENTING ===")
+print("=" * 80)
+
+important_routes = [
+    ('Arad', 'Bucharest'),
+    ('Arad', 'Iasi'),
+    ('Zerind', 'Bucharest'),
+    ('Timisoara', 'Neamt')
+]
+
+for source, target in important_routes:
+    path = nx.dijkstra_path(G, source=source, target=target, weight='weight')
+    distance = nx.dijkstra_path_length(G, source=source, target=target, weight='weight')
+    path_str = " -> ".join(path)
+    print(f"\n{source} ke {target}:")
+    print(f"  Rute: {path_str}")
+    print(f"  Total jarak: {distance} km")
+
 pos = {
     "Arad": (0,4),
     "Zerind": (1,5),
@@ -56,21 +86,24 @@ pos = {
     "Neamt": (6,5)
 }
 
-plt.figure(figsize=(12,7))
+plt.figure(figsize=(14, 8))
 
 nx.draw(
     G,
     pos,
     with_labels=True,
-    node_size=1200,
-    node_color="white",
+    node_size=1500,
+    node_color="lightblue",
     edgecolors="black",
-    font_size=9
+    font_size=8,
+    font_weight="bold",
+    width=2
 )
 
-edge_labels = nx.get_edge_attributes(G,'weight')
-nx.draw_networkx_edge_labels(G,pos,edge_labels=edge_labels,font_size=8)
+edge_labels = nx.get_edge_attributes(G, 'weight')
+nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=7)
 
-plt.title("Romania Map Graph")
+plt.title("Romania Map Graph - Weighted Graph", fontsize=14, fontweight='bold', pad=20)
 plt.axis("off")
+plt.tight_layout()
 plt.show()

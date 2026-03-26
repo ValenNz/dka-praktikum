@@ -1,10 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# Membuat graf tidak berarah
 G_jawa = nx.Graph()
 
-# Menambahkan edge dengan weight sesuai gambar
 edges_jawa = [
     ('Jakarta', 'Bandung', 270),
     ('Jakarta', 'Cirebon', 327),
@@ -22,13 +20,11 @@ edges_jawa = [
 
 G_jawa.add_weighted_edges_from(edges_jawa)
 
-# Menampilkan informasi graf
 print("=== GRAF KOTA-KOTA JAWA ===")
 print(f"Jumlah node: {G_jawa.number_of_nodes()}")
 print(f"Jumlah edge: {G_jawa.number_of_edges()}")
 print()
 
-# Mencari shortest path untuk beberapa pasangan kota
 print("=== SHORTEST PATH ===")
 print(f"Jakarta ke Surabaya: {nx.shortest_path(G_jawa, 'Jakarta', 'Surabaya', weight='weight')}")
 print(f"Jarak: {nx.shortest_path_length(G_jawa, 'Jakarta', 'Surabaya', weight='weight')} km")
@@ -41,11 +37,24 @@ print()
 print(f"Jakarta ke Yogyakarta: {nx.shortest_path(G_jawa, 'Jakarta', 'Yogyakarta', weight='weight')}")
 print(f"Jarak: {nx.shortest_path_length(G_jawa, 'Jakarta', 'Yogyakarta', weight='weight')} km")
 
-# Visualisasi graf
-pos = nx.spring_layout(G_jawa, k=2, seed=42)
+pos = {
+    'Jakarta': (0, 4),
+    'Bandung': (2, 2),
+    'Cirebon': (3, 4),
+    'Yogyakarta': (6, 0),
+    'Surakarta': (8, 1),
+    'Semarang': (7, 4),
+    'Surabaya': (11, 4),
+    'Malang': (10, 0)
+}
+
+plt.figure(figsize=(12, 6))
 nx.draw(G_jawa, pos, with_labels=True, node_color='lightgreen', 
-        node_size=2000, font_size=9, font_weight='bold')
+        node_size=2000, font_size=9, font_weight='bold',
+        edge_color='gray', width=2)
 edge_labels = nx.get_edge_attributes(G_jawa, 'weight')
 nx.draw_networkx_edge_labels(G_jawa, pos, edge_labels=edge_labels, font_size=8)
 plt.title('Graf Kota-Kota Besar di Pulau Jawa')
+plt.axis('off')
+plt.tight_layout()
 plt.show()
