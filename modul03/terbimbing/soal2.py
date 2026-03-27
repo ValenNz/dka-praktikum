@@ -14,7 +14,7 @@ edges_jawa = [
     ('Yogyakarta', 'Surakarta', 60),
     ('Semarang', 'Surakarta', 97),
     ('Semarang', 'Surabaya', 369),
-    ('Surakarta', 'Surabaya', 370),
+    ('Surakarta', 'Malang', 370),
     ('Surabaya', 'Malang', 94)
 ]
 
