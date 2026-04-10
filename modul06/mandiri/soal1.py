@@ -1,0 +1,5 @@
+print("Aku terlalu dalam masuk ke perasaan ini,")
+print("menggali tanpa batas, berharap menemukan kepastian.")
+print("Tapi semakin dalam aku masuk,")
+print("semakin gelap semuanya terasa.")
+print("Dan di titik itu aku sadar… kamu nggak pernah ikut masuk bersamaku.")
