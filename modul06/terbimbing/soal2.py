@@ -31,6 +31,22 @@ pos = {
     'Malang': (10, 0)
 }
 
+
+start = "Jakarta"
+goal = "Surakarta"
+
+path = [start]
+dfs_edges = []
+
+for u, v in nx.dfs_edges(G_jawa, source=start):
+    path.append(v)
+    dfs_edges.append((u, v))
+    
+    if v == goal:
+        break
+
+print(" -> ".join(path))
+
 plt.figure(figsize=(12, 6))
 
 nx.draw(
@@ -40,24 +56,19 @@ nx.draw(
     node_size=2000,
     font_color='white',
     font_weight='bold',
+    edge_color='lightgray',
     width=2
 )
 
+nx.draw_networkx_edges(
+    G_jawa, pos,
+    edgelist=dfs_edges,
+    edge_color='blue',
+    width=4
+)
+
 edge_labels = nx.get_edge_attributes(G_jawa, 'weight')
-nx.draw_networkx_edge_labels(G_jawa, pos, edge_labels=edge_labels, font_color='blue')
+nx.draw_networkx_edge_labels(G_jawa, pos, edge_labels=edge_labels)
 
-plt.title("Graf Kota-Kota Besar di Pulau Jawa")
+plt.title("Jalur DFS dari Jakarta ke Surakarta")
 plt.show()
-
-print("\nDFS dari Jakarta ke Surakarta:")
-
-goal = "Surakarta"
-path = ["Jakarta"]
-
-for u, v in nx.dfs_edges(G_jawa, source='Jakarta'):
-    path.append(v)
-    
-    if v == goal:
-        break
-
-print(" -> ".join(path))

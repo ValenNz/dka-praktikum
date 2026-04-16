@@ -1,7 +1,6 @@
 import networkx as nx 
 import matplotlib.pyplot as plt
 
-# Membuat graf
 G = nx.Graph()
 
 edges = [
@@ -32,7 +31,6 @@ edges = [
 
 G.add_weighted_edges_from(edges)
 
-# Posisi node
 pos = {
     "Arad": (0,4),
     "Zerind": (1,5),
@@ -56,7 +54,21 @@ pos = {
     "Neamt": (6,5)
 }
 
-# Visualisasi
+start = "Timisoara"
+goal = "Eforie"
+
+visited_order = [start]
+dfs_path_edges = []
+
+for u, v in nx.dfs_edges(G, source=start):
+    visited_order.append(v)
+    dfs_path_edges.append((u, v))
+    
+    if v == goal:
+        break
+
+print(" -> ".join(visited_order))
+
 plt.figure(figsize=(14,8))
 
 nx.draw(
@@ -66,24 +78,19 @@ nx.draw(
     node_size=1500,
     font_color="white",
     font_weight="bold",
+    edge_color="lightgray",
     width=2
 )
 
+nx.draw_networkx_edges(
+    G, pos,
+    edgelist=dfs_path_edges,
+    edge_color="blue",
+    width=4
+)
+
 edge_labels = nx.get_edge_attributes(G, 'weight')
-nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color='blue')
+nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
 
-plt.title("Graf Peta Romania (Weighted Graph)")
+plt.title("Jalur DFS dari Timisoara ke Eforie")
 plt.show()
-
-# DFS
-print("\nDFS dari Timisoara ke Eforie:")
-
-visited_order = ["Timisoara"]
-goal = "Eforie"
-
-for u, v in nx.dfs_edges(G, source='Timisoara'):
-    visited_order.append(v)
-    if v == goal:
-        break
-
-print(" -> ".join(visited_order))
