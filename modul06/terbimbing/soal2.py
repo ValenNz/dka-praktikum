@@ -1,7 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-
 G_jawa = nx.Graph()
 
 edges_jawa = [
@@ -20,7 +19,6 @@ edges_jawa = [
 ]
 
 G_jawa.add_weighted_edges_from(edges_jawa)
-
 
 pos = {
     'Jakarta': (0, 4),
@@ -51,12 +49,12 @@ nx.draw_networkx_edge_labels(G_jawa, pos, edge_labels=edge_labels, font_color='b
 plt.title("Graf Kota-Kota Besar di Pulau Jawa")
 plt.show()
 
-print("\nDFS dari Bandung ke Malang:")
+print("\nDFS dari Jakarta ke Surakarta:")
 
-goal = "Malang"
-path = ["Bandung"]
+goal = "Surakarta"
+path = ["Jakarta"]
 
-for u, v in nx.dfs_edges(G_jawa, source='Bandung'):
+for u, v in nx.dfs_edges(G_jawa, source='Jakarta'):
     path.append(v)
     
     if v == goal:

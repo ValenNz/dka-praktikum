@@ -1,6 +1,7 @@
-import networkx as nx
+import networkx as nx 
 import matplotlib.pyplot as plt
 
+# Membuat graf
 G = nx.Graph()
 
 edges = [
@@ -31,6 +32,7 @@ edges = [
 
 G.add_weighted_edges_from(edges)
 
+# Posisi node
 pos = {
     "Arad": (0,4),
     "Zerind": (1,5),
@@ -54,6 +56,7 @@ pos = {
     "Neamt": (6,5)
 }
 
+# Visualisasi
 plt.figure(figsize=(14,8))
 
 nx.draw(
@@ -72,12 +75,13 @@ nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color='blue')
 plt.title("Graf Peta Romania (Weighted Graph)")
 plt.show()
 
-print("\nDFS dari Arad ke Neamt:")
+# DFS
+print("\nDFS dari Timisoara ke Eforie:")
 
-visited_order = ["Arad"]
-goal = "Neamt"
+visited_order = ["Timisoara"]
+goal = "Eforie"
 
-for u, v in nx.dfs_edges(G, source='Arad'):
+for u, v in nx.dfs_edges(G, source='Timisoara'):
     visited_order.append(v)
     if v == goal:
         break
