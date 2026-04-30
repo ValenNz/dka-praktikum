@@ -1,0 +1,1 @@
+print("ACari apa sih sayanag?")
