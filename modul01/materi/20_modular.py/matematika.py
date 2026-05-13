@@ -1,4 +1,3 @@
-# File: matematika.py
 """
 Module matematika - Berisi fungsi-fungsi matematika dasar
 """

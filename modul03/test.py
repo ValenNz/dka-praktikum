@@ -35,10 +35,7 @@ def show_graph(G, pos=None, title=''):
     plt.title(title)
     plt.show()
 
-# criar grafo fora da função
 G_undirected = nx.Graph()
 G_undirected.add_nodes_from(pos.keys())
-# opcional: adicionar arestas:
-# G_undirected.add_weighted_edges_from([('A','B',1), ('B','C',2), ...])
 
 show_graph(G_undirected, pos=pos, title="Undirected Graph Kosong")

@@ -1,1 +1,1 @@
-print("cari apa sih sayang ?")
+print("cari apa sih sayang")

@@ -1,0 +1,5 @@
+print("Aku selalu memilih kamu di setiap kesempatan,")
+print("tanpa berpikir panjang, tanpa ragu.")
+print("Karena buatku, kamu adalah pilihan terbaik.")
+print("Tapi aku lupa satu hal…")
+print("kamu nggak pernah melihatku sebagai pilihan.")

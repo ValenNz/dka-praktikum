@@ -1,20 +1,16 @@
 import numpy as np
 
-# Program Inventaris Gudang dengan NumPy
 print("=" * 50)
 print("SISTEM INVENTARIS GUDANG")
 print("=" * 50)
 
-# Input jumlah barang
 jumlah = int(input("Masukkan jumlah jenis barang: "))
 
-# Inisialisasi array untuk menyimpan data
 nama_barang = np.array([])
 kode_barang = np.array([])
 jumlah_barang = np.array([])
 harga = np.array([])
 
-# Input data barang
 for i in range(jumlah):
     print(f"\nBarang ke-{i+1}")
     nama = input("Nama Barang: ")
@@ -27,11 +23,9 @@ for i in range(jumlah):
     jumlah_barang = np.append(jumlah_barang, jml)
     harga = np.append(harga, hrg)
 
-# Hitung total nilai inventaris
 nilai_per_barang = jumlah_barang * harga
 total_nilai = np.sum(nilai_per_barang)
 
-# Tampilkan semua data
 print("\n" + "=" * 60)
 print("DATA INVENTARIS")
 print("=" * 60)
@@ -44,7 +38,6 @@ for i in range(len(nama_barang)):
 print("-" * 60)
 print(f"{'TOTAL NILAI INVENTARIS:':<49} Rp {total_nilai:.2f}")
 
-# Pencarian barang
 print("\n" + "=" * 50)
 print("PENCARIAN BARANG")
 print("=" * 50)

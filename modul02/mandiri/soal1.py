@@ -86,7 +86,6 @@ def tampilkan_3_tertinggi():
         print("\n Data belum ada!")
         return
     
-    # Dapatkan indeks nilai tertinggi
     indeks_tertinggi = np.argsort(nilai_akhir)[::-1][:3]
     
     print("\n=== 3 NILAI TERTINGGI ===")

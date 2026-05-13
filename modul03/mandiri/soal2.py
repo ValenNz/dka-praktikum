@@ -26,25 +26,16 @@ nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
 plt.title("Weighted Graph Soal 2")
 plt.show()
 
-# =========================
-# 2. Shortest Path A ke E
-# =========================
 path = nx.shortest_path(G, source='A', target='E', weight='weight')
 distance = nx.shortest_path_length(G, source='A', target='E', weight='weight')
 
 print("\nJalur terpendek dari A ke E:", path)
 print("Total weight:", distance)
 
-# =========================
-# Analisis Jalur Awal
-# =========================
 print("\nAnalisis:")
 print("- Jalur dipilih karena memiliki total weight paling kecil")
 print("- Weight berperan sebagai biaya/jarak dalam menentukan jalur optimal")
 
-# =========================
-# 3. Ubah Weight (C,E) jadi 1
-# =========================
 G['C']['E']['weight'] = 1
 
 print("\n=== SETELAH PERUBAHAN WEIGHT (C,E)=1 ===")
@@ -55,13 +46,7 @@ distance_baru = nx.shortest_path_length(G, source='A', target='E', weight='weigh
 print("Jalur terpendek baru:", path_baru)
 print("Total weight baru:", distance_baru)
 
-# =========================
-# Analisis Perubahan
-# =========================
 print("\nAnalisis Perubahan:")
 print("- Jalur berubah karena ada edge dengan weight lebih kecil")
 print("- Algoritma selalu memilih total weight paling minimum")
 
-# =========================
-# 4. Visualisasi Graph
-# =========================
